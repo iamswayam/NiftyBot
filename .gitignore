@@ -1,0 +1,21 @@
+# ─────────────────────────────────────────────────────────────────────
+# .gitignore — Files that should NEVER be pushed to Git
+# ─────────────────────────────────────────────────────────────────────
+
+# Secret credentials — NEVER push this
+.env
+
+# Python virtual environment — too large, not needed on Git
+venv/
+
+# Log files
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
