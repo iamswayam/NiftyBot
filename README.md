@@ -44,7 +44,7 @@ Priority 3 → LTP between ₹70 – ₹100  (wider)
 ... keeps widening until a strike is found
 
 If 2 strikes found in same range → picks HIGHER LTP
-Always uses nearest weekly Thursday expiry
+Expiry auto-detected from Kotak scrip master — no hardcoding
 ```
 
 This automatically selects slightly **OTM options** — better R:R than ATM, not too cheap like deep OTM.
@@ -97,8 +97,9 @@ NiftyBot/
 ├── kill_switch.py      # Automated Kill Switch via browser
 ├── .env                # Your credentials (NEVER pushed to Git)
 ├── .env.example        # Credential template (safe to push)
-├── .gitignore          # Protects .env and log files from Git
-└── README.md           # This file
+├── .gitignore          # Protects .env, logs and cache from Git
+├── README.md           # This file
+└── temp/               # Auto-created — scrip master daily cache (not pushed)
 ```
 
 ---
@@ -131,11 +132,7 @@ source venv/bin/activate
 
 ### 3. Install dependencies
 ```bash
-# Kotak Neo API
-pip install "git+https://github.com/Kotak-Neo/kotak-neo-api.git" --no-deps
-
-# Other packages
-pip install pyotp requests selenium webdriver-manager python-dotenv pandas
+pip install pyotp requests selenium webdriver-manager python-dotenv
 ```
 
 ### 4. Configure credentials
