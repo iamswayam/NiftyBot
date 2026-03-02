@@ -210,12 +210,11 @@ python trading_bot.py
 
 | Setting | Value |
 |---|---|
-| Lot size | 75 units |
-| Strike gap | 50 points |
-| Expiry | Nearest Thursday (weekly) |
+| Lot size | Auto-read from scrip master |
+| Expiry | Auto-detected from scrip master |
 | Order type | Market |
 | Product | MIS (intraday) |
-| LTP target range | ₹80–90 (priority) |
+| LTP target range | ₹80–90 (priority), widens until found |
 
 ---
 
